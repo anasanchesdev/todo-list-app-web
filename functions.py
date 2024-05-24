@@ -50,11 +50,14 @@ def get_path(relative_path):
     return os.path.join(base_path, relative_path)
 
 
-def get_time():
+def get_time(hours=True):
     """
     Gets time and formats into string.
     """
-    n = strftime('%A, %b %d, %Y %H:%M:%S')
+    if hours:
+        n = strftime('%A, %b %d, %Y %H:%M:%S')
+        return n
+    n = strftime('%A, %b %d, %Y')
     return n
 
 

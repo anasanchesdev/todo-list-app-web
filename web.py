@@ -3,6 +3,7 @@ TODO FIX: To-dos em branco sendo criados após completar o último to-do da list
 """
 
 import streamlit as st
+from streamlit_extras.app_logo import add_logo
 import functions as f
 
 todos_list = f.get_todos()   # gets to-dos from archive todos.txt
@@ -23,7 +24,7 @@ def add_todo():
 
 # gui setup (header)
 st.title('Todo List App')
-st.subheader('Welcome!')
+st.subheader(f.get_time(hours=False))
 st.text('Start being productive right now!')
 
 # adds one checkbox for each to-do
