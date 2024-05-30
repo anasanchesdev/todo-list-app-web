@@ -2,6 +2,7 @@ from time import strftime
 import os
 import sys
 
+# cria todos.txt caso não exista
 if not os.path.exists('todos.txt'):
     with open('todos.txt', 'w') as file:
         pass
