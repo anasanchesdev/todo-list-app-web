@@ -39,4 +39,3 @@ for index, todo in enumerate(todos_list):
 
 # on_change: action to be executed when user enters a prompt
 st.text_input(label='.', placeholder='Add a new todo...', key=f'new_todo', on_change=add_todo, label_visibility='hidden')
-st.session_state
